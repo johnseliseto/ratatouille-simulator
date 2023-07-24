@@ -10,7 +10,6 @@ class Player {
 
         // direction of the player's moving horizontally
         this.directionX = 0;
-        //this.directionY = 0;
 
         this.element = document.createElement("img");
         this.element.src = imgSrc;
@@ -26,7 +25,6 @@ class Player {
 
     move() {
         this.left += this.directionX;
-        //this.top += this.directionY; // not needed
 
         if(this.left + this.width > this.gameScreen.offsetWidth) {
             this.left = this.gameScreen.offsetWidth - this.width;

@@ -99,30 +99,41 @@ class Game {
         if(!this.obstacles.length && !this.isPushingObstacle) {
             this.isPushingObstacle = true;
             setTimeout(() => {
-                this.obstacles.push(new Obstacle(this.gameScreen));
+                this.obstacles.push(new eggplantsObstacle(this.gameScreen));
+                /*this.obstacles.push(new garlicObstacle(this.gameScreen));
+                this.obstacles.push(new romatomatoesObstacle(this.gameScreen));
+                this.obstacles.push(new yellowpepperObstacle(this.gameScreen));
+                this.obstacles.push(new yellowsquashesObstacle(this.gameScreen));
+                this.obstacles.push(new zucchinisObstacle(this.gameScreen));
+                this.obstacles.push(new arcdetriompheObstacle(this.gameScreen));
+                this.obstacles.push(new bycicleObstacle(this.gameScreen));
+                this.obstacles.push(new lockObstacle(this.gameScreen));
+                this.obstacles.push(new moulinrougeObstacle(this.gameScreen));
+                this.obstacles.push(new notredameObstacle(this.gameScreen));
+                this.obstacles.push(new touredeeifelObstacle(this.gameScreen));*/
+                this.isPushingObstacle = false;
+            }, 500);
+        }
+        else if(!this.obstacles.length && !this.isPushingObstacle) {
+            this.isPushingObstacle = true;
+            setTimeout(() => {
+                this.obstacles.push(new garlicObstacle(this.gameScreen));
                 this.isPushingObstacle = false;
             }, 500);
         }
     }
 
     endGame() {
-        // remove player
         this.player.element.remove();
 
-        // Remove all obstacles from the array of obstacles
         this.obstacles.forEach(obstacle => {
-            // Remove from the HTML
             obstacle.element.remove();
         })
 
-        this.obstacles = [] // my obstacles array is empty
-
+        this.obstacles = []
         this.gameIsOver = true;
 
-        // Hide the game screen
         this.gameScreen.style.display = "none"; 
-
-        // Show en game screen
         this.gameEndScreen.style.display = "block";
     }
 }

@@ -1,4 +1,4 @@
-/*class eggplantsObstacle {
+class eggplantsObstacle {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
@@ -416,9 +416,9 @@ class touredeeifelObstacle {
     this.top += 3;
     this.updatePosition();
   }
-}*/
+}
 
-class Obstacle {
+/*class Obstacle {
   constructor(gameScreen, imgSrc) {
     this.gameScreen = gameScreen;
 
@@ -467,4 +467,4 @@ const bycicleObstacle = new Obstacle(gameScreen, "/docs/images/bicycle.png");
 const lockObstacle = new Obstacle(gameScreen, "/docs/images/lock.png");
 const moulinrougeObstacle = new Obstacle(gameScreen, "/docs/images/moulinrouge.png");
 const notredameObstacle = new Obstacle(gameScreen, "/docs/images/notredame.png");
-const touredeeifelObstacle = new Obstacle(gameScreen, "/docs/images/tourdeeiffel.png");
+const touredeeifelObstacle = new Obstacle(gameScreen, "/docs/images/tourdeeiffel.png");*/
