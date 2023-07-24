@@ -10,7 +10,7 @@ class Game {
             300,
             300,
             250,
-            "./images/Linguini.png"
+            "/docs/images/Linguini.png"
         );
 
         this.width = 950;
