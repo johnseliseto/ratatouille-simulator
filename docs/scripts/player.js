@@ -10,7 +10,7 @@ class Player {
 
         // direction of the player's moving horizontally
         this.directionX = 0;
-        this.directionY = 0; // not needed
+        //this.directionY = 0;
 
         this.element = document.createElement("img");
         this.element.src = imgSrc;
@@ -26,7 +26,7 @@ class Player {
 
     move() {
         this.left += this.directionX;
-        this.top += this.directionY; // not needed
+        //this.top += this.directionY; // not needed
 
         if(this.left + this.width > this.gameScreen.offsetWidth) {
             this.left = this.gameScreen.offsetWidth - this.width;
@@ -41,12 +41,27 @@ class Player {
         else if (this.top < 0) {
             this.top = 0;
         }
-
+        
         this.updatePosition();
     }
 
     updatePosition() {
         this.element.style.left = `${this.left}px`;
         this.element.style.top = `${this.top}px`;
+    }
+
+    didCollide(obstacle) {
+        // .getBoundingClientRect() return info about top, left, right, bottom, width, height about an HTML Element
+        const playerRect = this.element.getBoundingClientRect();
+        const obstacleRect = obstacle.element.getBoundingClientRect();
+
+        if(playerRect.left < obstacleRect.right &&
+            playerRect.right > obstacleRect.left &&
+            playerRect.top < obstacleRect.bottom &&
+            playerRect.bottom > obstacleRect.top) {
+                return true;
+        } else {
+            return false;
+        } // to understand better the condition, do console.log(playerRect, obstacleRect)
     }
 }

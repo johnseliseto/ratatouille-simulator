@@ -25,7 +25,7 @@ window.onload = function () {
         const key = event.key;
         const possibleKeystrokes = [
             "ArrowLeft",
-            "ArrowRight"
+            "ArrowRight",
         ]
 
         if(possibleKeystrokes.includes(key)) {
