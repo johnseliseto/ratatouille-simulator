@@ -1,0 +1,144 @@
+html{
+    height: 100%;
+    }
+
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    height: 100%;
+}
+
+#game-intro {
+    background-image: url(../images/menu-background.png);
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#image-cheff {
+    width: 200px;
+}
+
+#start-button {
+    background-color: #a12b0d;
+    color: #d1ae2f;
+    font-weight: 600;
+    border: solid;
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+/*#instructions-button {
+    background-color: #a12b0d;
+    color: #d1ae2f;
+    font-weight: 600;
+    border: solid;
+    height: 44px;
+    width: 230px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+#instructions {
+    background-image: url(../images/Instructions-Background.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#image-instructions {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}*/
+
+.box {
+    background-color: #A12B0D;
+    opacity: 0.8;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px;
+    width: 500px;
+    line-height: 1.5;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border: solid #D1AE2F;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box img {
+    margin: -2px auto;
+}
+
+#arrows {
+    width: 15px;
+}
+
+#game-container {
+    display: flex;
+    width: 100vw;
+    padding: 20px 0px;
+    justify-content: center;
+}
+  
+#game-screen {
+    display: none;
+    align-content: center;
+    padding: 20px 0px;
+    overflow: hidden;
+    position: relative;
+    /*background-color: rgb(217, 186, 119);
+    opacity: 0.3;*/
+    margin-left: 62px;
+    
+}
+
+#container-background {
+    background-image: url(../images/game-background.png);
+    background-size: cover;
+}
+
+/*#game-container {
+    background-image: url(../images/game-background.png);
+    background-size: 100%;
+}
+
+#game-screen {
+    background-image: url(../images/game-background.png);
+    background-size: 100%;
+    display: none;
+    align-content: center;
+    padding: 20px 0px;
+    overflow: hidden;
+    position: relative;
+}*/
+
+#game-end {
+    display: none;
+    background-image: url(../images/gameover-background.png);
+}
+
+#image-game-over {
+    width: 350px;
+}
+
+#menu-button{
+    background-color: #a12b0d;
+    color: #d1ae2f;
+    font-weight: 600;
+    border: solid;
+    height: 44px;
+    width: 195px;
+    margin-top: 20px;
+    border-radius: 4px;
+    
+}
