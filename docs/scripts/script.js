@@ -27,12 +27,7 @@ window.onload = function () {
     }
 
     function restartGame() {
-        console.log("restart game");
-
-        game = new Game();
-
-        game.start();
-        console.log(game)
+       location.reload();
     }
 
     function handleKeyDown(event) {

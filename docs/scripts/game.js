@@ -1,13 +1,13 @@
 class Game {
     constructor() {
         this.startScreen = document.getElementById("game-intro");
-        this.gameScreen = document.getElementById("game-screen");
+        this.gameScreen = document.getElementById("game-container");
         this.gameEndScreen = document.getElementById('game-end');
 
         this.player = new Player (
             this.gameScreen,
-            30,
-            450,
+            10,
+            300,
             300,
             250,
             "/docs/images/Linguini.png"
@@ -44,7 +44,7 @@ class Game {
         this.gameScreen.style.height = `${this.height}vh`;
 
         this.startScreen.style.display = "none";
-        this.gameScreen.style.display = "flex";
+        this.gameScreen.style.display = "block";
 
         this.gameLoop();
     }

@@ -2,7 +2,7 @@ class Eggplants {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 500 + 100);
+    this.left = Math.floor(Math.random() * 1000 + 100);
 
     this.top = -10;
     this.width = 100;
@@ -35,7 +35,7 @@ class Garlic {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 500 + 100);
+    this.left = Math.floor(Math.random() * 1000 + 100);
 
     this.top = 0;
     this.width = 150;
@@ -68,7 +68,7 @@ class RomaTomatoes {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 500 + 100);
+    this.left = Math.floor(Math.random() * 1000 + 100);
 
     this.top = 0;
     this.width = 100;
@@ -101,7 +101,7 @@ class YellowPepper {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 500 + 100);
+    this.left = Math.floor(Math.random() * 1000 + 100);
 
     this.top = 0;
     this.width = 100;
@@ -134,7 +134,7 @@ class YellowPepper {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 500 + 100);
+    this.left = Math.floor(Math.random() * 1000 + 100);
 
     this.top = 0;
     this.width = 100;
@@ -167,7 +167,7 @@ class Zucchinis {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 500 + 100);
+    this.left = Math.floor(Math.random() * 1000 + 100);
 
     this.top = 0;
     this.width = 100;
@@ -200,7 +200,7 @@ class ArcDeTriomphe {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 500 + 100);
+    this.left = Math.floor(Math.random() * 1000 + 100);
 
     this.top = 0;
     this.width = 100;
@@ -233,7 +233,7 @@ class Bycicle {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 500 + 100);
+    this.left = Math.floor(Math.random() * 1000 + 100);
 
     this.top = 0;
     this.width = 100;
@@ -266,7 +266,7 @@ class Lock {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 500 + 100);
+    this.left = Math.floor(Math.random() * 1000 + 100);
 
     this.top = 0;
     this.width = 100;
@@ -299,7 +299,7 @@ class MoulinRouge {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 500 + 100);
+    this.left = Math.floor(Math.random() * 1000 + 100);
 
     this.top = 0;
     this.width = 100;
@@ -332,7 +332,7 @@ class NotreDame {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 500 + 100);
+    this.left = Math.floor(Math.random() * 1000 + 100);
 
     this.top = 0;
     this.width = 100;
@@ -365,7 +365,7 @@ class ToureDeEifel {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 500 + 100);
+    this.left = Math.floor(Math.random() * 1000 + 100);
 
     this.top = 0;
     this.width = 100;
