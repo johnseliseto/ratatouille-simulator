@@ -1,6 +1,7 @@
 window.onload = function () {
     const startButton = document.getElementById("start-button");
     const restartButton = document.getElementById("restart-button");
+    //const mainMenuButton = document.getElementById("menu-button");
   
     let game;
   
@@ -9,8 +10,12 @@ window.onload = function () {
     });
   
     restartButton.addEventListener("click", function() {
-      location.reload;
-    })
+      restartGame();
+    });
+
+   /*  mainMenuButton.addEventListener("click", function() {
+        mainMenuButton();
+    }); */
   
     function startGame() {
       console.log("start game");
@@ -19,6 +24,15 @@ window.onload = function () {
   
       game.start();
       console.log(game)
+    }
+
+    function restartGame() {
+        console.log("restart game");
+
+        game = new Game();
+
+        game.start();
+        console.log(game)
     }
 
     function handleKeyDown(event) {

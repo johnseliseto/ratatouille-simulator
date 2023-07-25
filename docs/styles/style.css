@@ -2,6 +2,13 @@ html{
     height: 100%;
     }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -11,11 +18,13 @@ body {
 
 #game-intro {
     background-image: url(/docs/images/menu-background.png);
-    background-size: 100%;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100vh;
+    width: 100vw;
 }
 
 #image-cheff {
@@ -84,28 +93,27 @@ body {
 }
 
 #game-container {
-    display: flex;
+    background-image: url(/docs/images/game-background.png);
+    background-size: cover;
+    height: 100vh;
     width: 100vw;
-    padding: 20px 0px;
-    justify-content: center;
 }
   
 #game-screen {
     display: none;
     align-content: center;
-    padding: 20px 0px;
-    overflow: hidden;
-    position: relative;
-    /*background-color: rgb(217, 186, 119);
-    opacity: 0.3;*/
-    margin-left: 62px;
-    
+    justify-content: center;
 }
 
-#container-background {
+/* #container-background {
     background-image: url(/docs/images/game-background.png);
     background-size: cover;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+} */
 
 /*#game-container {
     background-image: url(../images/game-background.png);
@@ -125,13 +133,15 @@ body {
 #game-end {
     display: none;
     background-image: url(/docs/images/gameover-background.png);
+    background-size: cover;
+    height: 100vh;
 }
 
 #image-game-over {
     width: 350px;
 }
 
-#menu-button{
+#main-menu-button{
     background-color: #a12b0d;
     color: #d1ae2f;
     font-weight: 600;
@@ -142,3 +152,8 @@ body {
     border-radius: 4px;
     
 }
+
+/* #game-win {
+    display: none;
+    background-image: url(/docs/images/gameover-background.png);
+} */

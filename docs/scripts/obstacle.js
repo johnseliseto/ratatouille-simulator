@@ -1,19 +1,17 @@
-class eggplantsObstacle {
+class Eggplants {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
     this.left = Math.floor(Math.random() * 500 + 100);
 
     this.top = -10;
-    this.with = 100;
-    this.height = 150;
+    this.width = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/eggplants.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
-    this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;
 
     this.gameScreen.appendChild(this.element);
@@ -33,22 +31,20 @@ class eggplantsObstacle {
   }
 }
 
-class garlicObstacle {
+class Garlic {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 300 + 100);
+    this.left = Math.floor(Math.random() * 500 + 100);
 
     this.top = 0;
-    this.with = 100;
-    this.height = 150;
+    this.width = 150;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/garlic.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
-    this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;
 
     this.gameScreen.appendChild(this.element);
@@ -68,22 +64,20 @@ class garlicObstacle {
   }
 }
 
-class romatomatoesObstacle {
+class RomaTomatoes {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 300 + 100);
+    this.left = Math.floor(Math.random() * 500 + 100);
 
     this.top = 0;
-    this.with = 100;
-    this.height = 150;
+    this.width = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/romatomatoes.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
-    this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;
 
     this.gameScreen.appendChild(this.element);
@@ -103,22 +97,20 @@ class romatomatoesObstacle {
   }
 }
 
-class yellowpepperObstacle {
+class YellowPepper {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 300 + 100);
+    this.left = Math.floor(Math.random() * 500 + 100);
 
     this.top = 0;
-    this.with = 100;
-    this.height = 150;
+    this.width = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/yellowpepper.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
-    this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;
 
     this.gameScreen.appendChild(this.element);
@@ -138,22 +130,20 @@ class yellowpepperObstacle {
   }
 }
 
-class yellowsquashesObstacle {
+ class YellowSquashes {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 300 + 100);
+    this.left = Math.floor(Math.random() * 500 + 100);
 
     this.top = 0;
-    this.with = 100;
-    this.height = 150;
+    this.width = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/yellowsquashes.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
-    this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;
 
     this.gameScreen.appendChild(this.element);
@@ -173,22 +163,20 @@ class yellowsquashesObstacle {
   }
 }
 
-class zucchinisObstacle {
+class Zucchinis {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 300 + 100);
+    this.left = Math.floor(Math.random() * 500 + 100);
 
     this.top = 0;
-    this.with = 100;
-    this.height = 150;
+    this.width = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/zucchinis.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
-    this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;
 
     this.gameScreen.appendChild(this.element);
@@ -208,22 +196,20 @@ class zucchinisObstacle {
   }
 }
 
-class arcdetriompheObstacle {
+class ArcDeTriomphe {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 300 + 100);
+    this.left = Math.floor(Math.random() * 500 + 100);
 
     this.top = 0;
-    this.with = 100;
-    this.height = 150;
+    this.width = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/arcdetriomphe.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
-    this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;
 
     this.gameScreen.appendChild(this.element);
@@ -243,22 +229,20 @@ class arcdetriompheObstacle {
   }
 }
 
-class bycicleObstacle {
+class Bycicle {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 300 + 100);
+    this.left = Math.floor(Math.random() * 500 + 100);
 
     this.top = 0;
-    this.with = 100;
-    this.height = 150;
+    this.width = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/bicycle.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
-    this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;
 
     this.gameScreen.appendChild(this.element);
@@ -278,22 +262,20 @@ class bycicleObstacle {
   }
 }
 
-class lockObstacle {
+class Lock {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 300 + 100);
+    this.left = Math.floor(Math.random() * 500 + 100);
 
     this.top = 0;
-    this.with = 100;
-    this.height = 150;
+    this.width = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/lock.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
-    this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;
 
     this.gameScreen.appendChild(this.element);
@@ -313,22 +295,20 @@ class lockObstacle {
   }
 }
 
-class moulinrougeObstacle {
+class MoulinRouge {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 300 + 100);
+    this.left = Math.floor(Math.random() * 500 + 100);
 
     this.top = 0;
-    this.with = 100;
-    this.height = 150;
+    this.width = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/moulinrouge.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
-    this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;
 
     this.gameScreen.appendChild(this.element);
@@ -348,22 +328,20 @@ class moulinrougeObstacle {
   }
 }
 
-class notredameObstacle {
+class NotreDame {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 300 + 100);
+    this.left = Math.floor(Math.random() * 500 + 100);
 
     this.top = 0;
-    this.with = 100;
-    this.height = 150;
+    this.width = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/notredame.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
-    this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;
 
     this.gameScreen.appendChild(this.element);
@@ -383,22 +361,20 @@ class notredameObstacle {
   }
 }
 
-class touredeeifelObstacle {
+class ToureDeEifel {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
-    this.left = Math.floor(Math.random() * 300 + 100);
+    this.left = Math.floor(Math.random() * 500 + 100);
 
     this.top = 0;
-    this.with = 100;
-    this.height = 150;
+    this.width = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/tourdeeiffel.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
-    this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;
 
     this.gameScreen.appendChild(this.element);
@@ -417,54 +393,3 @@ class touredeeifelObstacle {
     this.updatePosition();
   }
 }
-
-/*class Obstacle {
-  constructor(gameScreen, imgSrc) {
-    this.gameScreen = gameScreen;
-
-    this.left = Math.floor(Math.random() * 500 + 100);
-
-    this.top = -10;
-    this.with = 100;
-    this.height = 150;
-    // create the HTML element default styling
-    this.element = document.createElement("img");
-    this.element.src = imgSrc;
-    this.element.style.position = "absolute";
-    this.element.style.top = `${this.top}px`;
-    this.element.style.left = `${this.left}px`;
-    this.element.style.height = `${this.height}px`;
-    this.element.style.width = `${this.width}px`;
-
-    this.gameScreen.appendChild(this.element);
-  }
-
-  updatePosition() {
-    this.element.style.left = `${this.left}px`;
-    this.element.style.top = `${this.top}px`;
-    console.log(this.left);
-    console.log(this.top);
-  }
-
-  move() {
-    // Drop the obstacle 3px to the bottom
-    this.top += 3;
-    this.updatePosition();
-  }
-}
-
-const gameScreen = document.getElementById("gameScreen");
-
-const eggplantsObstacle = new Obstacle(gameScreen, "/docs/images/eggplants.png");
-const garlicObstacle = new Obstacle(gameScreen, "/docs/images/garlic.png");
-const romatomatoesObstacle = new Obstacle(gameScreen, "/docs/images/romatomatoes.png");
-const yellowpepperObstacle = new Obstacle(gameScreen, "/docs/images/yellowpepper.png");
-const yellowsquashesObstacle = new Obstacle(gameScreen, "/docs/images/yellowsquashes.png");
-const zucchinisObstacle = new Obstacle(gameScreen, "/docs/images/zucchinis.png");
-
-const arcdetriompheObstacle = new Obstacle(gameScreen, "/docs/images/arcdetriomphe.png");
-const bycicleObstacle = new Obstacle(gameScreen, "/docs/images/bicycle.png");
-const lockObstacle = new Obstacle(gameScreen, "/docs/images/lock.png");
-const moulinrougeObstacle = new Obstacle(gameScreen, "/docs/images/moulinrouge.png");
-const notredameObstacle = new Obstacle(gameScreen, "/docs/images/notredame.png");
-const touredeeifelObstacle = new Obstacle(gameScreen, "/docs/images/tourdeeiffel.png");*/
