@@ -6,15 +6,15 @@ class Game {
 
     this.player = new Player(
       this.gameScreen,
-      10,
-      300,
+      78,
+      712,
       300,
       250,
       "/docs/images/Linguini.png"
     );
 
-    this.width = 100;
-    this.height = 100;
+    this.width = 1500;
+    this.height = 700;
 
     // create empty arrays for all the ingredients that will store that ingredient
     this.egglplants = [];
@@ -40,8 +40,8 @@ class Game {
   }
 
   start() {
-    this.gameScreen.style.width = `${this.width}vw`;
-    this.gameScreen.style.height = `${this.height}vh`;
+    this.gameScreen.style.width = `${this.width}px`;
+    this.gameScreen.style.height = `${this.height}px`;
 
     this.startScreen.style.display = "none";
     this.gameScreen.style.display = "block";
@@ -76,184 +76,6 @@ class Game {
 
     this.player.move();
 
-    // Check for collision and if an obstacles still on the screen
-    for (let i = 0; i < this.egglplants.length; i++) {
-      // Grabbing an obstacle and moving it downards
-      const eggplantObject = this.egglplants[i];
-      eggplantObject.move();
-
-      // Check if the player collide with an obstacle
-      if (this.player.didCollide(eggplantObject)) {
-        // Remove the obstacle from the DOM/HTML
-        eggplantObject.element.remove();
-
-        // Remove obstacle from the array
-        this.egglplants.splice(i, 1);
-
-        // Remove player's live by 1
-        this.score++; //instead of ++
-      }
-
-      // Check if the obstacle is off the screen (at the bottom)
-      else if (eggplantObject.top > this.height) {
-        // Congratulations to you, you avoided one obstacle
-        this.lives--;
-
-        // Remove the obstacle from the HTML
-        eggplantObject.element.remove();
-
-        // Remove the obstacle from the array of obstacles
-        this.egglplants.splice(i, 1); //i = index and 1 = only one element will be removed
-      }
-    }
-
-    // Update Obstacles - only when there is no other obstacles on the screen
-    if (!this.egglplants.length && !this.isPushingObstacle) {
-      this.isPushingObstacle = true;
-      setTimeout(() => {
-        this.egglplants.push(new Eggplants(this.gameScreen));
-        this.isPushingObstacle = false;
-      }, 739);
-    }
-
-    // ----- GARLIC -------Check for collision and if an obstacles still on the screen
-    for (let i = 0; i < this.garlic.length; i++) {
-      const garlictObject = this.garlic[i];
-      garlictObject.move();
-
-      if (this.player.didCollide(garlictObject)) {
-        garlictObject.element.remove();
-        this.garlic.splice(i, 1);
-        this.score++;
-      } else if (garlictObject.top > this.height) {
-        this.lives--;
-        garlictObject.element.remove();
-        this.garlic.splice(i, 1);
-      }
-    }
-
-    if (!this.garlic.length && !this.isPushingObstacle) {
-      this.isPushingObstacle = true;
-      setTimeout(() => {
-        this.garlic.push(new Garlic(this.gameScreen));
-        this.isPushingObstacle = false;
-      }, 500);
-    }
-
-    // ----- ROMATOMATOES -------//
-    for (let i = 0; i < this.romaTomatoes.length; i++) {
-      const romaTomatoesObject = this.romaTomatoes[i];
-      romaTomatoesObject.move();
-
-      if (this.player.didCollide(romaTomatoesObject)) {
-        romaTomatoesObject.element.remove();
-        this.romaTomatoes.splice(i, 1);
-        this.score++;
-      }
-
-      // Check if the obstacle is off the screen (at the bottom)
-      else if (romaTomatoesObject.top > this.height) {
-        this.lives--;
-        romaTomatoesObject.element.remove();
-        this.romaTomatoes.splice(i, 1);
-      }
-    }
-
-    // Update Obstacles - only when there is no other obstacles on the screen
-    if (!this.romaTomatoes.length && !this.isPushingObstacle) {
-      this.isPushingObstacle = true;
-      setTimeout(() => {
-        this.romaTomatoes.push(new RomaTomatoes(this.gameScreen));
-        this.isPushingObstacle = false;
-      }, 500);
-    }
-
-    // ----- YELLOW PEPPERS -------//
-    for (let i = 0; i < this.yellowPepper.length; i++) {
-      const yellowPeperObject = this.yellowPepper[i];
-      yellowPeperObject.move();
-
-      // Check if the player collide with an obstacle
-      if (this.player.didCollide(yellowPeperObject)) {
-        yellowPeperObject.element.remove();
-        this.yellowPepper.splice(i, 1);
-        this.score++;
-      }
-
-      // Check if the obstacle is off the screen (at the bottom)
-      else if (yellowPeperObject.top > this.height) {
-        this.lives--;
-        yellowPeperObject.element.remove();
-        this.yellowPepper.splice(i, 1);
-      }
-    }
-
-    // Update Obstacles - only when there is no other obstacles on the screen
-    if (!this.yellowPepper.length && !this.isPushingObstacle) {
-      this.isPushingObstacle = true;
-      setTimeout(() => {
-        this.yellowPepper.push(new YellowPepper(this.gameScreen));
-        this.isPushingObstacle = false;
-      }, 500);
-    }
-
-    // ----- YELLOW SQUASHES ------
-    for (let i = 0; i < this.yellowSquashes.length; i++) {
-      const yellowSquashesObject = this.yellowSquashes[i];
-      yellowSquashesObject.move();
-
-      if (this.player.didCollide(yellowSquashesObject)) {
-        yellowSquashesObject.element.remove();
-        this.yellowSquashes.splice(i, 1);
-        this.score++;
-      }
-
-      // Check if the obstacle is off the screen (at the bottom)
-      else if (yellowSquashesObject.top > this.height) {
-        this.lives--;
-        yellowSquashesObject.element.remove();
-        this.yellowSquashes.splice(i, 1);
-      }
-    }
-
-    // Update Obstacles - only when there is no other obstacles on the screen
-    if (!this.yellowSquashes.length && !this.isPushingObstacle) {
-      this.isPushingObstacle = true;
-      setTimeout(() => {
-        this.yellowSquashes.push(new YellowSquashes(this.gameScreen));
-        this.isPushingObstacle = false;
-      }, 500);
-    }
-
-    // ----- ZUCCINIS ------
-    for (let i = 0; i < this.zucchinis.length; i++) {
-      const zucchinisObject = this.zucchinis[i];
-      zucchinisObject.move();
-
-      // Check if the player collide with an obstacle
-      if (this.player.didCollide(zucchinisObject)) {
-        zucchinisObject.element.remove();
-        this.zucchinis.splice(i, 1);
-        this.score++;
-      }
-
-      // Check if the obstacle is off the screen (at the bottom)
-      else if (zucchinisObject.top > this.height) {
-        this.lives--;
-        zucchinisObject.element.remove();
-        this.zucchinis.splice(i, 1);
-      }
-    }
-
-    // Update Obstacles - only when there is no other obstacles on the screen
-    if (!this.zucchinis.length && !this.isPushingObstacle) {
-      this.isPushingObstacle = true;
-      setTimeout(() => {
-        this.zucchinis.push(new Zucchinis(this.gameScreen));
-        this.isPushingObstacle = false;
-      }, 500);
-    }
-
     // ----- ARC DE TRIOUMPHE ------
     for (let i = 0; i < this.arcdeTriomphe.length; i++) {
       const arcdeTriompheObject = this.arcdeTriomphe[i];
@@ -279,6 +101,30 @@ class Game {
       this.isPushingObstacle = true;
       setTimeout(() => {
         this.arcdeTriomphe.push(new ArcDeTriomphe(this.gameScreen));
+        this.isPushingObstacle = false;
+      }, 500);
+    }
+
+    // ----- GARLIC -------Check for collision and if an obstacles still on the screen
+    for (let i = 0; i < this.garlic.length; i++) {
+      const garlictObject = this.garlic[i];
+      garlictObject.move();
+
+      if (this.player.didCollide(garlictObject)) {
+        garlictObject.element.remove();
+        this.garlic.splice(i, 1);
+        this.score++;
+      } else if (garlictObject.top > this.height) {
+        this.lives--;
+        garlictObject.element.remove();
+        this.garlic.splice(i, 1);
+      }
+    }
+
+    if (!this.garlic.length && !this.isPushingObstacle) {
+      this.isPushingObstacle = true;
+      setTimeout(() => {
+        this.garlic.push(new Garlic(this.gameScreen));
         this.isPushingObstacle = false;
       }, 500);
     }
@@ -312,6 +158,34 @@ class Game {
       }, 500);
     }
 
+    // ----- ROMATOMATOES -------//
+    for (let i = 0; i < this.romaTomatoes.length; i++) {
+      const romaTomatoesObject = this.romaTomatoes[i];
+      romaTomatoesObject.move();
+
+      if (this.player.didCollide(romaTomatoesObject)) {
+        romaTomatoesObject.element.remove();
+        this.romaTomatoes.splice(i, 1);
+        this.score++;
+      }
+
+      // Check if the obstacle is off the screen (at the bottom)
+      else if (romaTomatoesObject.top > this.height) {
+        this.lives--;
+        romaTomatoesObject.element.remove();
+        this.romaTomatoes.splice(i, 1);
+      }
+    }
+
+    // Update Obstacles - only when there is no other obstacles on the screen
+    if (!this.romaTomatoes.length && !this.isPushingObstacle) {
+      this.isPushingObstacle = true;
+      setTimeout(() => {
+        this.romaTomatoes.push(new RomaTomatoes(this.gameScreen));
+        this.isPushingObstacle = false;
+      }, 500);
+    }
+
     // ----- LOCK ------
     for (let i = 0; i < this.lock.length; i++) {
       const lockObject = this.lock[i];
@@ -337,6 +211,35 @@ class Game {
       this.isPushingObstacle = true;
       setTimeout(() => {
         this.lock.push(new Lock(this.gameScreen));
+        this.isPushingObstacle = false;
+      }, 500);
+    }
+
+    // ----- YELLOW PEPPERS -------//
+    for (let i = 0; i < this.yellowPepper.length; i++) {
+      const yellowPeperObject = this.yellowPepper[i];
+      yellowPeperObject.move();
+
+      // Check if the player collide with an obstacle
+      if (this.player.didCollide(yellowPeperObject)) {
+        yellowPeperObject.element.remove();
+        this.yellowPepper.splice(i, 1);
+        this.score++;
+      }
+
+      // Check if the obstacle is off the screen (at the bottom)
+      else if (yellowPeperObject.top > this.height) {
+        this.lives--;
+        yellowPeperObject.element.remove();
+        this.yellowPepper.splice(i, 1);
+      }
+    }
+
+    // Update Obstacles - only when there is no other obstacles on the screen
+    if (!this.yellowPepper.length && !this.isPushingObstacle) {
+      this.isPushingObstacle = true;
+      setTimeout(() => {
+        this.yellowPepper.push(new YellowPepper(this.gameScreen));
         this.isPushingObstacle = false;
       }, 500);
     }
@@ -371,6 +274,34 @@ class Game {
       }, 500);
     }
 
+    // ----- YELLOW SQUASHES ------
+    for (let i = 0; i < this.yellowSquashes.length; i++) {
+      const yellowSquashesObject = this.yellowSquashes[i];
+      yellowSquashesObject.move();
+
+      if (this.player.didCollide(yellowSquashesObject)) {
+        yellowSquashesObject.element.remove();
+        this.yellowSquashes.splice(i, 1);
+        this.score++;
+      }
+
+      // Check if the obstacle is off the screen (at the bottom)
+      else if (yellowSquashesObject.top > this.height) {
+        this.lives--;
+        yellowSquashesObject.element.remove();
+        this.yellowSquashes.splice(i, 1);
+      }
+    }
+
+    // Update Obstacles - only when there is no other obstacles on the screen
+    if (!this.yellowSquashes.length && !this.isPushingObstacle) {
+      this.isPushingObstacle = true;
+      setTimeout(() => {
+        this.yellowSquashes.push(new YellowSquashes(this.gameScreen));
+        this.isPushingObstacle = false;
+      }, 500);
+    }
+
     // ----- NOTRE DAME ------
     for (let i = 0; i < this.notreDame.length; i++) {
       // Grabbing an obstacle and moving it downards
@@ -397,6 +328,35 @@ class Game {
       this.isPushingObstacle = true;
       setTimeout(() => {
         this.notreDame.push(new NotreDame(this.gameScreen));
+        this.isPushingObstacle = false;
+      }, 500);
+    }
+
+    // ----- ZUCCINIS ------
+    for (let i = 0; i < this.zucchinis.length; i++) {
+      const zucchinisObject = this.zucchinis[i];
+      zucchinisObject.move();
+
+      // Check if the player collide with an obstacle
+      if (this.player.didCollide(zucchinisObject)) {
+        zucchinisObject.element.remove();
+        this.zucchinis.splice(i, 1);
+        this.score++;
+      }
+
+      // Check if the obstacle is off the screen (at the bottom)
+      else if (zucchinisObject.top > this.height) {
+        this.lives--;
+        zucchinisObject.element.remove();
+        this.zucchinis.splice(i, 1);
+      }
+    }
+
+    // Update Obstacles - only when there is no other obstacles on the screen
+    if (!this.zucchinis.length && !this.isPushingObstacle) {
+      this.isPushingObstacle = true;
+      setTimeout(() => {
+        this.zucchinis.push(new Zucchinis(this.gameScreen));
         this.isPushingObstacle = false;
       }, 500);
     }
@@ -445,4 +405,3 @@ class Game {
     this.gameEndScreen.style.display = "block";
   }
 }
-sddfsfdhgkr;

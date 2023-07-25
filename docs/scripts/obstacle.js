@@ -130,7 +130,7 @@ class YellowPepper {
   }
 }
 
- class YellowSquashes {
+class YellowSquashes {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
 
