@@ -8,8 +8,8 @@ class Game {
       this.gameScreen,
       78,
       712,
-      300,
       250,
+      200,
       "/docs/images/Linguini.png"
     );
 
@@ -76,6 +76,29 @@ class Game {
 
     this.player.move();
 
+    // ----- EGGPLANTS -------Check for collision and if an obstacles still on the screen
+    for (let i = 0; i < this.egglplants.length; i++) {
+      const eggPlantsObject = this.egglplants[i];
+      eggPlantsObject.move();
+
+      if (this.player.didCollide(eggPlantsObject)) {
+        eggPlantsObject.element.remove();
+        this.egglplants.splice(i, 1);
+        this.score++;
+      } else if (eggPlantsObject.top > this.height) {
+        eggPlantsObject.element.remove();
+        this.egglplants.splice(i, 1);
+      }
+    }
+
+    if (!this.egglplants.length && !this.isPushingObstacle) {
+      this.isPushingObstacle = true;
+      setTimeout(() => {
+        this.egglplants.push(new Eggplants(this.gameScreen));
+        this.isPushingObstacle = false;
+      }, 500);
+    }
+
     // ----- ARC DE TRIOUMPHE ------
     for (let i = 0; i < this.arcdeTriomphe.length; i++) {
       const arcdeTriompheObject = this.arcdeTriomphe[i];
@@ -114,7 +137,6 @@ class Game {
         this.garlic.splice(i, 1);
         this.score++;
       } else if (garlictObject.top > this.height) {
-        this.lives--;
         garlictObject.element.remove();
         this.garlic.splice(i, 1);
       }
@@ -169,7 +191,6 @@ class Game {
 
       // Check if the obstacle is off the screen (at the bottom)
       else if (romaTomatoesObject.top > this.height) {
-        this.lives--;
         romaTomatoesObject.element.remove();
         this.romaTomatoes.splice(i, 1);
       }
@@ -226,7 +247,6 @@ class Game {
 
       // Check if the obstacle is off the screen (at the bottom)
       else if (yellowPeperObject.top > this.height) {
-        this.lives--;
         yellowPeperObject.element.remove();
         this.yellowPepper.splice(i, 1);
       }
@@ -251,12 +271,11 @@ class Game {
       if (this.player.didCollide(moulinRougeObject)) {
         moulinRougeObject.element.remove();
         this.moulinRouge.splice(i, 1);
-        this.score++;
+        this.lives--;
       }
 
       // Check if the obstacle is off the screen (at the bottom)
       else if (moulinRougeObject.top > this.height) {
-        this.lives--;
         moulinRougeObject.element.remove();
         this.moulinRouge.splice(i, 1);
       }
@@ -284,7 +303,6 @@ class Game {
 
       // Check if the obstacle is off the screen (at the bottom)
       else if (yellowSquashesObject.top > this.height) {
-        this.lives--;
         yellowSquashesObject.element.remove();
         this.yellowSquashes.splice(i, 1);
       }
@@ -309,12 +327,11 @@ class Game {
       if (this.player.didCollide(notreDameObject)) {
         notreDameObject.element.remove();
         this.notreDame.splice(i, 1);
-        this.score++;
+        this.lives--;
       }
 
       // Check if the obstacle is off the screen (at the bottom)
       else if (notreDameObject.top > this.height) {
-        this.lives--;
         notreDameObject.element.remove();
         this.notreDame.splice(i, 1);
       }
@@ -343,7 +360,6 @@ class Game {
 
       // Check if the obstacle is off the screen (at the bottom)
       else if (zucchinisObject.top > this.height) {
-        this.lives--;
         zucchinisObject.element.remove();
         this.zucchinis.splice(i, 1);
       }
@@ -367,12 +383,11 @@ class Game {
       if (this.player.didCollide(tourDeEifleObject)) {
         tourDeEifleObject.element.remove();
         this.tourDeEifle.splice(i, 1);
-        this.score++;
+        this.lives--;
       }
 
       // Check if the obstacle is off the screen (at the bottom)
       else if (tourDeEifleObject.top > this.height) {
-        this.lives--;
         tourDeEifleObject.element.remove();
         this.tourDeEifle.splice(i, 1);
       }

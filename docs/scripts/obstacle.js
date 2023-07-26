@@ -6,6 +6,7 @@ class Eggplants {
 
     this.top = -10;
     this.width = 100;
+    this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/eggplants.png";
@@ -13,6 +14,7 @@ class Eggplants {
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
     this.element.style.width = `${this.width}px`;
+    this.element.style.height = `${this.height}px`;
 
     this.gameScreen.appendChild(this.element);
   }
@@ -28,6 +30,9 @@ class Eggplants {
     // Drop the obstacle 3px to the bottom
     this.top += 3;
     this.updatePosition();
+    if (this.top + this.height > this.gameScreen.offsetHeight) {
+      this.element.remove();
+    }
   }
 }
 
@@ -39,6 +44,7 @@ class Garlic {
 
     this.top = 0;
     this.width = 150;
+    this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/garlic.png";
@@ -46,7 +52,7 @@ class Garlic {
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
     this.element.style.width = `${this.width}px`;
-
+    this.element.style.height = `${this.height}px`;
     this.gameScreen.appendChild(this.element);
   }
 
@@ -61,6 +67,9 @@ class Garlic {
     // Drop the obstacle 3px to the bottom
     this.top += 3;
     this.updatePosition();
+    if (this.top + this.height > this.gameScreen.offsetHeight) {
+      this.element.remove();
+    }
   }
 }
 
@@ -72,6 +81,7 @@ class RomaTomatoes {
 
     this.top = 0;
     this.width = 100;
+    this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/romatomatoes.png";
@@ -79,7 +89,7 @@ class RomaTomatoes {
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
     this.element.style.width = `${this.width}px`;
-
+    this.element.style.height = `${this.height}px`;
     this.gameScreen.appendChild(this.element);
   }
 
@@ -94,6 +104,9 @@ class RomaTomatoes {
     // Drop the obstacle 3px to the bottom
     this.top += 3;
     this.updatePosition();
+    if (this.top + this.height > this.gameScreen.offsetHeight) {
+      this.element.remove();
+    }
   }
 }
 
@@ -105,6 +118,7 @@ class YellowPepper {
 
     this.top = 0;
     this.width = 100;
+    this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/yellowpepper.png";
@@ -112,7 +126,7 @@ class YellowPepper {
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
     this.element.style.width = `${this.width}px`;
-
+    this.element.style.height = `${this.height}px`;
     this.gameScreen.appendChild(this.element);
   }
 
@@ -127,6 +141,9 @@ class YellowPepper {
     // Drop the obstacle 3px to the bottom
     this.top += 3;
     this.updatePosition();
+    if (this.top + this.height > this.gameScreen.offsetHeight) {
+      this.element.remove();
+    }
   }
 }
 
@@ -138,6 +155,7 @@ class YellowSquashes {
 
     this.top = 0;
     this.width = 100;
+    this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/yellowsquashes.png";
@@ -145,7 +163,7 @@ class YellowSquashes {
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
     this.element.style.width = `${this.width}px`;
-
+    this.element.style.height = `${this.height}px`;
     this.gameScreen.appendChild(this.element);
   }
 
@@ -160,6 +178,9 @@ class YellowSquashes {
     // Drop the obstacle 3px to the bottom
     this.top += 3;
     this.updatePosition();
+    if (this.top + this.height > this.gameScreen.offsetHeight) {
+      this.element.remove();
+    }
   }
 }
 
@@ -171,6 +192,7 @@ class Zucchinis {
 
     this.top = 0;
     this.width = 100;
+    this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/zucchinis.png";
@@ -178,7 +200,7 @@ class Zucchinis {
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
     this.element.style.width = `${this.width}px`;
-
+    this.element.style.height = `${this.height}px`;
     this.gameScreen.appendChild(this.element);
   }
 
@@ -193,6 +215,9 @@ class Zucchinis {
     // Drop the obstacle 3px to the bottom
     this.top += 3;
     this.updatePosition();
+    if (this.top + this.height > this.gameScreen.offsetHeight) {
+      this.element.remove();
+    }
   }
 }
 
@@ -204,6 +229,7 @@ class ArcDeTriomphe {
 
     this.top = 0;
     this.width = 100;
+    this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/arcdetriomphe.png";
@@ -211,7 +237,7 @@ class ArcDeTriomphe {
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
     this.element.style.width = `${this.width}px`;
-
+    this.element.style.height = `${this.height}px`;
     this.gameScreen.appendChild(this.element);
   }
 
@@ -226,6 +252,9 @@ class ArcDeTriomphe {
     // Drop the obstacle 3px to the bottom
     this.top += 3;
     this.updatePosition();
+    if (this.top + this.height > this.gameScreen.offsetHeight) {
+      this.element.remove();
+    }
   }
 }
 
@@ -236,7 +265,8 @@ class Bycicle {
     this.left = Math.floor(Math.random() * 1000 + 100);
 
     this.top = 0;
-    this.width = 100;
+    this.width = 150;
+    this.height = 150;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/bicycle.png";
@@ -244,7 +274,7 @@ class Bycicle {
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
     this.element.style.width = `${this.width}px`;
-
+    this.element.style.height = `${this.height}px`;
     this.gameScreen.appendChild(this.element);
   }
 
@@ -259,6 +289,9 @@ class Bycicle {
     // Drop the obstacle 3px to the bottom
     this.top += 3;
     this.updatePosition();
+    if (this.top + this.height > this.gameScreen.offsetHeight) {
+      this.element.remove();
+    }
   }
 }
 
@@ -270,6 +303,7 @@ class Lock {
 
     this.top = 0;
     this.width = 100;
+    this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/lock.png";
@@ -277,7 +311,7 @@ class Lock {
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
     this.element.style.width = `${this.width}px`;
-
+    this.element.style.height = `${this.height}px`;
     this.gameScreen.appendChild(this.element);
   }
 
@@ -292,6 +326,9 @@ class Lock {
     // Drop the obstacle 3px to the bottom
     this.top += 3;
     this.updatePosition();
+    if (this.top + this.height > this.gameScreen.offsetHeight) {
+      this.element.remove();
+    }
   }
 }
 
@@ -303,6 +340,7 @@ class MoulinRouge {
 
     this.top = 0;
     this.width = 100;
+    this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/moulinrouge.png";
@@ -310,7 +348,7 @@ class MoulinRouge {
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
     this.element.style.width = `${this.width}px`;
-
+    this.element.style.height = `${this.height}px`;
     this.gameScreen.appendChild(this.element);
   }
 
@@ -325,6 +363,9 @@ class MoulinRouge {
     // Drop the obstacle 3px to the bottom
     this.top += 3;
     this.updatePosition();
+    if (this.top + this.height > this.gameScreen.offsetHeight) {
+      this.element.remove();
+    }
   }
 }
 
@@ -336,6 +377,7 @@ class NotreDame {
 
     this.top = 0;
     this.width = 100;
+
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/notredame.png";
@@ -369,6 +411,7 @@ class ToureDeEifel {
 
     this.top = 0;
     this.width = 100;
+    this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
     this.element.src = "/docs/images/tourdeeiffel.png";
@@ -376,7 +419,7 @@ class ToureDeEifel {
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
     this.element.style.width = `${this.width}px`;
-
+    this.element.style.height = `${this.height}px`;
     this.gameScreen.appendChild(this.element);
   }
 
@@ -391,5 +434,8 @@ class ToureDeEifel {
     // Drop the obstacle 3px to the bottom
     this.top += 3;
     this.updatePosition();
+    if (this.top + this.height > this.gameScreen.offsetHeight) {
+      this.element.remove();
+    }
   }
 }

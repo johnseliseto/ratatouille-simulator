@@ -11,41 +11,29 @@
       <div id="game-intro">
         <img id="image-cheff" src="/docs/images/Gusteau.png" alt="" />
         <button id="start-button">Start Game</button>
-        <!-- <button id="instructions-button">How to cook your own meal</button> -->
         <div class="box">
-          <p>The rules are very simple: <br></br> When the game starts, random pieces will start falling. Using the <img id="arrows" src="/docs/images/left key.png" alt="left"> and <img id="arrows" src="/docs/images/right key.png" alt="right"> keys on your keyboard, collect all the necessary ingridients in order to compelete the menus.  <br></br>
-          The goal is to complete as many menus as possible!</p>
+          <p>The rules are very simple: <br></br> When the game starts, random pieces will start falling. Using the <img id="arrows" src="/docs/images/left key.png" alt="left"> and <img id="arrows" src="/docs/images/right key.png" alt="right"> keys on your keyboard, collect ingredients only. For each ingredient, you earn one <img id="stats" src="/docs/images/ratatouille-score.png" alt="score"> and for each non-ingredient you lose one <img id="stats" src="/docs/images/ratatouille-lives.png" alt="lives">.  <br></br>
+            The goal is to always have a higher score! </p>
         </div>
       </div>
-
-      <!--<div id="instructions">
-        <img id="image-instructions" src="..//cooking-game-js/images/h1 Instructions.png" alt="">
-        <div class="box">
-            <p>The rules are very simple: <br></br> When the game starts, random pieces will start falling. Using the <img id="arrows" src="../cooking-game-js/images/left key.png" alt="left"> and <img id="arrows" src="../cooking-game-js/images/right key.png" alt="right"> keys on your keyboard, collect all the necessary ingridients in order to compelete the menus.  <br></br>
-            The goal is to complete as many menus as possible!</p>
-        </div>
-        <button id="start-button">Start Game</button>
-        <button id="menu-button">Main Menu</button>
-      </div> -->
-
       
         <!-- FIRST PAGE -->
       <div id="game-container">
-         <h2>Stats</h2>
-         <p>Score: <span id="score">0</span></p>
-         <p>Lives: <span id="lives">3</span></p>
+         <!-- <h2>Stats</h2> -->
+         <p class = "score-stats"> <img id="score-image" src="/docs/images/ratatouille-score.png" alt="Score"><span id="score">0</span></p>
+         <p class = "score-stats"> <img id="live-image" src="/docs/images/ratatouille-lives.png" alt="Lives"><span id="lives">3</span></p>
          <!-- #game-screen is initially hidden using CSS style display: none -->
          <div id="game-screen"></div>
       </div>
       
-
       <div>
         <!-- #game-end is initially hidden using CSS style display: none -->
         <div id="game-end">
+          <div id="game-over">
           <img id="image-game-over" src="/docs/images/game-over-image.png" alt="">
           <button id="restart-button">Restart Game</button>
-          <button id="main-menu-button">Main Menu</button>
-          </div>
+        </div>
+        </div>
       </div>
 
      <!--  <div>
