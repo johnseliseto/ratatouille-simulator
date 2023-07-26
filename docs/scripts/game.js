@@ -85,12 +85,11 @@ class Game {
       if (this.player.didCollide(arcdeTriompheObject)) {
         arcdeTriompheObject.element.remove();
         this.arcdeTriomphe.splice(i, 1);
-        this.score++;
+        this.lives--;
       }
 
       // Check if the obstacle is off the screen (at the bottom)
       else if (arcdeTriompheObject.top > this.height) {
-        this.lives--;
         arcdeTriompheObject.element.remove();
         this.arcdeTriomphe.splice(i, 1);
       }
@@ -138,12 +137,11 @@ class Game {
       if (this.player.didCollide(bycicleObject)) {
         bycicleObject.element.remove();
         this.bycicle.splice(i, 1);
-        this.score++;
+        this.lives--;
       }
 
       // Check if the obstacle is off the screen (at the bottom)
       else if (bycicleObject.top > this.height) {
-        this.lives--;
         bycicleObject.element.remove();
         this.bycicle.splice(i, 1);
       }
@@ -195,12 +193,11 @@ class Game {
       if (this.player.didCollide(lockObject)) {
         lockObject.element.remove();
         this.lock.splice(i, 1);
-        this.score++;
+        this.lives--;
       }
 
       // Check if the obstacle is off the screen (at the bottom)
       else if (lockObject.top > this.height) {
-        this.lives--;
         lockObject.element.remove();
         this.lock.splice(i, 1);
       }
