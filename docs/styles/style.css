@@ -82,22 +82,23 @@ body {
 #score {
   color: white;
   text-decoration: solid;
-  font-size: 50px;
+  font-size: 40px;
+  margin-bottom: 15px;
 }
 
 #score-image {
-  width: 60px;
+  width: 45px;
   margin-right: 10px;
 }
 
 #lives {
   color: white;
   text-decoration: solid;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 #live-image {
-  width: 60px;
+  width: 50px;
   margin-right: 10px;
 }
 

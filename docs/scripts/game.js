@@ -4,6 +4,10 @@ class Game {
     this.gameScreen = document.getElementById("game-container");
     this.gameEndScreen = document.getElementById("game-end");
 
+    this.gameOverMusic = document.createElement("audio");
+    this.gameOverMusic.src = "";
+    this.gameEndScreen.appendChild(this.gameOverMusic);
+
     this.player = new Player(
       this.gameScreen,
       78,
@@ -37,6 +41,8 @@ class Game {
     this.lives = 3;
 
     this.gameIsOver = false;
+
+    this.backgroundMusic = null;
   }
 
   start() {
@@ -47,6 +53,18 @@ class Game {
     this.gameScreen.style.display = "block";
 
     this.gameLoop();
+
+    this.backgroundMusic = document.createElement("audio");
+    this.backgroundMusic.src = "/docs/sounds/game-music.mp3";
+    this.backgroundMusic.loop = true;
+
+    /*     this.backgroundMusic.addEventListener("ended", () => {
+      this.backgroundMusic.currentTime = 0;
+      this.backgroundMusic.play();
+    }); */
+
+    this.gameScreen.appendChild(this.backgroundMusic);
+    this.backgroundMusic.play();
   }
 
   gameLoop() {
@@ -415,5 +433,8 @@ class Game {
 
     this.gameScreen.style.display = "none";
     this.gameEndScreen.style.display = "block";
+
+    this.backgroundMusic.pause();
+    this.gameOverMusic.play();
   }
 }
