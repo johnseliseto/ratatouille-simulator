@@ -5,7 +5,7 @@ class Game {
     this.gameEndScreen = document.getElementById("game-end");
 
     this.gameOverMusic = document.createElement("audio");
-    this.gameOverMusic.src = "/docs/sounds/gameover-music.mp3";
+    this.gameOverMusic.src = "docs/sounds/gameover-music.mp3";
     this.gameEndScreen.appendChild(this.gameOverMusic);
 
     this.player = new Player(
@@ -14,7 +14,7 @@ class Game {
       712,
       250,
       200,
-      "/docs/images/Linguini.png"
+      "docs/images/Linguini.png"
     );
 
     this.width = 1500;
@@ -55,7 +55,7 @@ class Game {
     this.gameLoop();
 
     this.backgroundMusic = document.createElement("audio");
-    this.backgroundMusic.src = "/docs/sounds/game-music.mp3";
+    this.backgroundMusic.src = "docs/sounds/game-music.mp3";
     this.backgroundMusic.loop = true;
 
     /*     this.backgroundMusic.addEventListener("ended", () => {

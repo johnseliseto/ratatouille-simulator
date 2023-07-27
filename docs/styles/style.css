@@ -13,7 +13,7 @@ body {
 }
 
 #game-intro {
-  background-image: url(/docs/images/menu-background.png);
+  background-image: url(docs/images/menu-background.png);
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -69,7 +69,7 @@ body {
 }
 
 #game-container {
-  background-image: url(/docs/images/game-background.png);
+  background-image: url(./docs/images/game-background.png);
   background-size: cover;
 
   display: none;
@@ -110,7 +110,7 @@ body {
 
 #game-end {
   display: none;
-  background-image: url(/docs/images/gameover-background.png);
+  background-image: url(./docs/images/gameover-background.png);
   background-size: cover;
   height: 100vh;
   width: 100vw;

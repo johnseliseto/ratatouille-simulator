@@ -9,7 +9,7 @@ class Eggplants {
     this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
-    this.element.src = "/docs/images/eggplants.png";
+    this.element.src = "docs/images/eggplants.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
@@ -47,7 +47,7 @@ class Garlic {
     this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
-    this.element.src = "/docs/images/garlic.png";
+    this.element.src = "docs/images/garlic.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
@@ -84,7 +84,7 @@ class RomaTomatoes {
     this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
-    this.element.src = "/docs/images/romatomatoes.png";
+    this.element.src = "docs/images/romatomatoes.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
@@ -121,7 +121,7 @@ class YellowPepper {
     this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
-    this.element.src = "/docs/images/yellowpepper.png";
+    this.element.src = "docs/images/yellowpepper.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
@@ -158,7 +158,7 @@ class YellowSquashes {
     this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
-    this.element.src = "/docs/images/yellowsquashes.png";
+    this.element.src = "docs/images/yellowsquashes.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
@@ -195,7 +195,7 @@ class Zucchinis {
     this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
-    this.element.src = "/docs/images/zucchinis.png";
+    this.element.src = "docs/images/zucchinis.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
@@ -232,7 +232,7 @@ class ArcDeTriomphe {
     this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
-    this.element.src = "/docs/images/arcdetriomphe.png";
+    this.element.src = "docs/images/arcdetriomphe.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
@@ -269,7 +269,7 @@ class Bycicle {
     this.height = 150;
     // create the HTML element default styling
     this.element = document.createElement("img");
-    this.element.src = "/docs/images/bicycle.png";
+    this.element.src = "docs/images/bicycle.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
@@ -306,7 +306,7 @@ class Lock {
     this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
-    this.element.src = "/docs/images/lock.png";
+    this.element.src = "docs/images/lock.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
@@ -343,7 +343,7 @@ class MoulinRouge {
     this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
-    this.element.src = "/docs/images/moulinrouge.png";
+    this.element.src = "docs/images/moulinrouge.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
@@ -380,7 +380,7 @@ class NotreDame {
 
     // create the HTML element default styling
     this.element = document.createElement("img");
-    this.element.src = "/docs/images/notredame.png";
+    this.element.src = "docs/images/notredame.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
@@ -414,7 +414,7 @@ class ToureDeEifel {
     this.height = 100;
     // create the HTML element default styling
     this.element = document.createElement("img");
-    this.element.src = "/docs/images/tourdeeiffel.png";
+    this.element.src = "docs/images/tourdeeiffel.png";
     this.element.style.position = "absolute";
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;

@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./docs/styles/style.css"/>
+    <link rel="stylesheet" href="docs/styles/style.css"/>
     <title>Ratatouille Simulator</title>
   </head>
   <body>
     <main>
       <div id="game-intro">
-        <img id="image-cheff" src="/docs/images/Gusteau.png" alt="" />
+        <img id="image-cheff" src="docs/images/Gusteau.png" alt="" />
         <button id="start-button">Start Game</button>
         <div class="box">
           <p>The rules are very simple: <br></br> When the game starts, random pieces will start falling. Using the <img id="arrows" src="/docs/images/left key.png" alt="left"> and <img id="arrows" src="/docs/images/right key.png" alt="right"> keys on your keyboard, collect ingredients only. For each ingredient, you earn one <img id="stats" src="/docs/images/ratatouille-score.png" alt="score"> and for each non-ingredient you lose one <img id="stats" src="/docs/images/ratatouille-lives.png" alt="lives">.  <br></br>
@@ -20,8 +20,8 @@
         <!-- FIRST PAGE -->
       <div id="game-container">
          <!-- <h2>Stats</h2> -->
-         <p class = "score-stats"> <img id="score-image" src="/docs/images/ratatouille-score.png" alt="Score"><span id="score">0</span></p>
-         <p class = "score-stats"> <img id="live-image" src="/docs/images/ratatouille-lives.png" alt="Lives"><span id="lives">3</span></p>
+         <p class = "score-stats"> <img id="score-image" src="docs/images/ratatouille-score.png" alt="Score"><span id="score">0</span></p>
+         <p class = "score-stats"> <img id="live-image" src="docs/images/ratatouille-lives.png" alt="Lives"><span id="lives">3</span></p>
          <!-- #game-screen is initially hidden using CSS style display: none -->
          <div id="game-screen"></div>
       </div>
@@ -30,7 +30,7 @@
         <!-- #game-end is initially hidden using CSS style display: none -->
         <div id="game-end">
           <div id="game-over">
-          <img id="image-game-over" src="/docs/images/game-over-image.png" alt="">
+          <img id="image-game-over" src="docs/images/game-over-image.png" alt="">
           <button id="restart-button">Restart Game</button>
         </div>
         </div>
@@ -46,9 +46,9 @@
       </div> -->
     </main>
 
-    <script type="text/javascript" src="/docs/scripts/obstacle.js"></script> <!-- obstacles -->
-    <script type="text/javascript" src="/docs/scripts/player.js"></script> <!-- players -->
-    <script type="text/javascript" src="/docs/scripts/game.js"></script> <!-- Game actions-->
-    <script type="text/javascript" src="/docs/scripts/script.js"></script>
+    <script type="text/javascript" src="docs/scripts/obstacle.js"></script> <!-- obstacles -->
+    <script type="text/javascript" src="docs/scripts/player.js"></script> <!-- players -->
+    <script type="text/javascript" src="docs/scripts/game.js"></script> <!-- Game actions-->
+    <script type="text/javascript" src="docs/scripts/script.js"></script>
   </body>
 </html>
