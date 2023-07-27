@@ -5,7 +5,7 @@ class Game {
     this.gameEndScreen = document.getElementById("game-end");
 
     this.gameOverMusic = document.createElement("audio");
-    this.gameOverMusic.src = "";
+    this.gameOverMusic.src = "/docs/sounds/gameover-music.mp3";
     this.gameEndScreen.appendChild(this.gameOverMusic);
 
     this.player = new Player(
