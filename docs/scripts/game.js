@@ -3,6 +3,7 @@ class Game {
     this.startScreen = document.getElementById("game-intro");
     this.gameScreen = document.getElementById("game-container");
     this.gameEndScreen = document.getElementById("game-end");
+    this.creditScreen = document.getElementById("credits");
 
     this.gameOverMusic = document.createElement("audio");
     this.gameOverMusic.src = "docs/sounds/gameover-music.mp3";

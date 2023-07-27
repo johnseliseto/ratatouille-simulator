@@ -1,7 +1,15 @@
 window.onload = function () {
   const startButton = document.getElementById("start-button");
   const restartButton = document.getElementById("restart-button");
-  //const mainMenuButton = document.getElementById("menu-button");
+  const creditsButton = document.getElementById("credits-button");
+  const creditScreen = document.getElementById("credits");
+  const startScreen = document.getElementById("game-intro");
+  const menuButton = document.getElementById("credits");
+  const instructionScreen = document.getElementById("instructions");
+  const instructionsButton = document.getElementById("instructions-button");
+  const instructionsMenuButton = document.getElementById(
+    "instructionsMenuButton"
+  );
 
   let game;
 
@@ -13,9 +21,30 @@ window.onload = function () {
     restartGame();
   });
 
-  /*  mainMenuButton.addEventListener("click", function() {
-        mainMenuButton();
-    }); */
+  creditsButton.addEventListener("click", function () {
+    startScreen.style.display = "none";
+    creditScreen.style.display = "block";
+  });
+
+  creditsButton.addEventListener("click", function () {
+    startScreen.style.display = "none";
+    creditScreen.style.display = "block";
+  });
+
+  menuButton.addEventListener("click", function () {
+    creditScreen.style.display = "none";
+    startScreen.style.display = "flex";
+  });
+
+  instructionsButton.addEventListener("click", function () {
+    startScreen.style.display = "none";
+    instructionScreen.style.display = "block";
+  });
+
+  instructionsMenuButton.addEventListener("click", function () {
+    instructionScreen.style.display = "none";
+    startScreen.style.display = "flex";
+  });
 
   function startGame() {
     console.log("start game");

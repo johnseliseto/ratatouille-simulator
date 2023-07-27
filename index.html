@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="docs/styles/style.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="docs/styles/style.css" />
     <title>Ratatouille Simulator</title>
   </head>
   <body>
@@ -11,32 +11,76 @@
       <div id="game-intro">
         <img id="image-cheff" src="docs/images/Gusteau.png" alt="" />
         <button id="start-button">Start Game</button>
+        <button id="credits-button">Credits</button>
+        <button id="instructions-button">Instructions</button>
+        <!--         <div class="box">
+          <p>The rules are very simple: <br></br> When the game starts, random pieces will start falling. Using the <img id="arrows" src="docs/images/left key.png" alt="left"> and <img id="arrows" src="docs/images/right key.png" alt="right"> keys on your keyboard, collect ingredients only. For each ingredient, you earn one <img id="stats" src="docs/images/ratatouille-score.png" alt="score"> and for each non-ingredient you lose one <img id="stats" src="docs/images/ratatouille-lives.png" alt="lives">.  <br></br>
+            The goal is to always have a higher score! </p>
+        </div> -->
+      </div>
+
+      <div id="credits">
+        <div class="credits-box">
+          <h2>Developers</h2>
+          <div>
+            <p>Get to know Mariana</p>
+            <a href="https://github.com/maryanasilva" target="_blank"><button id="start-button" >GitHub</button></a>
+            <button id="start-button">LinkedIn</button>
+          </div>
+          <div>
+            <p>Get to know João</p>
+            <a href="https://github.com/johnseliseto" target="_blank"><button id="start-button">GitHub</button></a>
+            <a href="https://www.linkedin.com/in/jpelias24/" target="_blank"><button id="start-button">LinkedIn</button></a>
+            <button id="start-button">Menu</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="instructions">
+        <img id="instructions-title" src="/docs/images/h1 Instructions.png" alt="instructions" />
         <div class="box">
           <p>The rules are very simple: <br></br> When the game starts, random pieces will start falling. Using the <img id="arrows" src="docs/images/left key.png" alt="left"> and <img id="arrows" src="docs/images/right key.png" alt="right"> keys on your keyboard, collect ingredients only. For each ingredient, you earn one <img id="stats" src="docs/images/ratatouille-score.png" alt="score"> and for each non-ingredient you lose one <img id="stats" src="docs/images/ratatouille-lives.png" alt="lives">.  <br></br>
             The goal is to always have a higher score! </p>
+          <button id="instructionsMenuButton">Menu</button>
         </div>
       </div>
-      
-        <!-- FIRST PAGE -->
+
+      <!-- FIRST PAGE -->
       <div id="game-container">
-         <!-- <h2>Stats</h2> -->
-         <p class = "score-stats"> <img id="score-image" src="docs/images/ratatouille-score.png" alt="Score"><span id="score">0</span></p>
-         <p class = "score-stats"> <img id="live-image" src="docs/images/ratatouille-lives.png" alt="Lives"><span id="lives">3</span></p>
-         <!-- #game-screen is initially hidden using CSS style display: none -->
-         <div id="game-screen"></div>
+        <!-- <h2>Stats</h2> -->
+        <p class="score-stats">
+          <img
+            id="score-image"
+            src="docs/images/ratatouille-score.png"
+            alt="Score"
+          /><span id="score">0</span>
+        </p>
+        <p class="score-stats">
+          <img
+            id="live-image"
+            src="docs/images/ratatouille-lives.png"
+            alt="Lives"
+          /><span id="lives">3</span>
+        </p>
+        <!-- #game-screen is initially hidden using CSS style display: none -->
+        <div id="game-screen"></div>
       </div>
-      
+
       <div>
         <!-- #game-end is initially hidden using CSS style display: none -->
         <div id="game-end">
           <div id="game-over">
-          <img id="image-game-over" src="docs/images/game-over-image.png" alt="">
-          <button id="restart-button">Restart Game</button>
-        </div>
+            <img
+              id="image-game-over"
+              src="docs/images/game-over-image.png"
+              alt=""
+            />
+            <button id="restart-button">Restart Game</button>
+          </div>
         </div>
       </div>
 
-     <!--  <div>
+      <!--  <div>
         #game-win is initially hidden using CSS style display: none
         <div id="game-win">
           <img id="image-game-over" src="./docs/images/game-over-image.png" alt="">
@@ -46,9 +90,12 @@
       </div> -->
     </main>
 
-    <script type="text/javascript" src="docs/scripts/obstacle.js"></script> <!-- obstacles -->
-    <script type="text/javascript" src="docs/scripts/player.js"></script> <!-- players -->
-    <script type="text/javascript" src="docs/scripts/game.js"></script> <!-- Game actions-->
+    <script type="text/javascript" src="docs/scripts/obstacle.js"></script>
+    <!-- obstacles -->
+    <script type="text/javascript" src="docs/scripts/player.js"></script>
+    <!-- players -->
+    <script type="text/javascript" src="docs/scripts/game.js"></script>
+    <!-- Game actions-->
     <script type="text/javascript" src="docs/scripts/script.js"></script>
   </body>
 </html>
